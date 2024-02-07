@@ -135,13 +135,19 @@ const DataTable = ({
                     className="btn btn-warning"
                     onClick={() => handleEdit(item.id)}
                   >
-                    Edit
+                    แก้ไข
                   </button>{" "}
                   <button
                     className="btn btn-danger"
                     onClick={() => handleDelete(item.id)}
                   >
-                    Delete
+                    ลบ
+                  </button>{" "}
+                  <button
+                    class="btn btn-success"
+                    //onClick={() => }
+                  >
+                    เลือก
                   </button>
                 </>
               )}
