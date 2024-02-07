@@ -32,6 +32,7 @@ const Main = () => {
   });
 
   // Firestore collection reference
+
   const roitaiRef = collection(db, "course");
 
   // useEffect for real-time data loading and cleanup
@@ -55,7 +56,6 @@ const Main = () => {
       unsubscribe();
     };
   };
-  
 
   // Event handler for input change
   const handleChange = (e) => {
@@ -71,6 +71,7 @@ const Main = () => {
       .then((res) => {})
       .catch((err) => console.log(err));
   };
+  
 
   // Event handler for initiating edit mode
   const handleEdit = (id) => {
@@ -121,7 +122,7 @@ const Main = () => {
           
           <div className="d-flex">
             <AddCourse handleChange={handleChange} handleAddData={handleAddData} form={form} className="ml-2" />
-            <AddTeacher handleChange={handleChange} handleAddData={handleAddData} form={form} className="ml-2" />
+            <AddTeacher className="ml-2" />
             <Upload handleChange={handleChange} />
           </div>
         </div>

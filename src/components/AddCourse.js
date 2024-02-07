@@ -80,6 +80,7 @@ const AddCourse = ({ handleChange, handleAddData, form }) => {
                   value={form.type || ""}
                   placeholder="ประเภท"
                 >
+                  <option >กรุณาเลือก</option>
                   <option value="บรรยาย">บรรยาย</option>
                   <option value="ปฎิบัติ">ปฎิบัติ</option>
                 </select>
