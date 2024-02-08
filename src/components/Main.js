@@ -18,13 +18,15 @@ import Upload from "./Upload";
 
 import "../App.css"
 
+
+
 const Main = () => {
   // State variables for form data, existing data, editId, and search term
   const [form, setForm] = useState({});
   const [data, setData] = useState([]);
   const [editId, setEditId] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
-  
+
   // Filtered data based on search term
   const filteredData = data.filter((item) => {
     const values = Object.values(item).join(" ").toLowerCase();
@@ -32,7 +34,6 @@ const Main = () => {
   });
 
   // Firestore collection reference
-
   const roitaiRef = collection(db, "course");
 
   // useEffect for real-time data loading and cleanup
@@ -56,6 +57,7 @@ const Main = () => {
       unsubscribe();
     };
   };
+  
 
   // Event handler for input change
   const handleChange = (e) => {
@@ -71,7 +73,6 @@ const Main = () => {
       .then((res) => {})
       .catch((err) => console.log(err));
   };
-  
 
   // Event handler for initiating edit mode
   const handleEdit = (id) => {
@@ -103,12 +104,15 @@ const Main = () => {
     setForm({});
   };
 
+
   console.log(editId);
   return (
+    
     <div>
-      <Navbar />
+      <Navbar/>
       <div className="container-sm mt-5">
         <h2>รายวิชา</h2>
+        <button className="btn1">Logout</button>
         <div className="d-flex justify-content-between" style={{ width: '100%' }}>
           <div className="input-group mb-3 mt-3" style={{ width: '40%' }}>
             <input

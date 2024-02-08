@@ -1,8 +1,7 @@
 // rafce
 
-import React from 'react'
+import React, { Component } from 'react';
 import Main from './components/Main'
-// import FormInputQuestion from './components/FormInputQuestion'
 
 const App = () => {
   return (
@@ -10,6 +9,7 @@ const App = () => {
       <Main/>
     </div>
   )
-}
+} 
+
 
 export default App

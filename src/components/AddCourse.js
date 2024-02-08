@@ -24,63 +24,63 @@ const AddCourse = ({ handleChange, handleAddData, form }) => {
               <h1>เพิ่มรายวิชา</h1>
               <form>
               <div className="form-group">
-                <label htmlFor="code">รหัสวิชา:</label>
+                <label htmlFor="code">รหัสวิชา</label>
                 <input
                   className="form-control"
                   onChange={(e) => handleChange(e)}
                   type="number"
-                  name="รหัสวิชา"
+                  name="code"
                   value={form.code || ""}
-                  placeholder="รหัสวิชา"
+                  placeholder="Code"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="grade">หลักสูตร:</label>
+                <label htmlFor="grade">Grade:</label>
                 <input
                   className="form-control"
                   onChange={(e) => handleChange(e)}
                   type="number"
-                  name="หลักสูตร"
+                  name="grade"
                   value={form.grade || ""}
-                  placeholder="หลักสูตร"
+                  placeholder="Grade"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="name">ชื่อวิชา:</label>
+                <label htmlFor="name">Name:</label>
                 <input
                   className="form-control"
                   onChange={(e) => handleChange(e)}
                   type="text"
-                  name="ชื่อวิชา"
+                  name="name"
                   value={form.name || ""}
-                  placeholder="ชื่อวิชา"
+                  placeholder="Name"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="credit">หน่วยกิต:</label>
+                <label htmlFor="credit">Credit:</label>
                 <input
                   className="form-control"
                   onChange={(e) => handleChange(e)}
                   type="number"
-                  name="หน่วยกิต"
+                  name="credit"
                   value={form.credit || ""}
-                  placeholder="หน่วยกิต"
+                  placeholder="Credit"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="type">ประเภท:</label>
+                <label htmlFor="type">Type:</label>
                 <select
                   className="form-control"
                   onChange={(e) => handleChange(e)}
-                  name="ประเภท"
+                  name="type"
                   value={form.type || ""}
-                  placeholder="ประเภท"
+                  placeholder="Type"
                 >
-                  <option >กรุณาเลือก</option>
+                  <option >- กรุณาเลือก -</option>
                   <option value="บรรยาย">บรรยาย</option>
                   <option value="ปฎิบัติ">ปฎิบัติ</option>
                 </select>

@@ -1,5 +1,5 @@
-// DataTable.js
 import React from "react";
+import "../assets/DataTable.css"; // เชื่อมต่อไฟล์ CSS
 
 const DataTable = ({
   data,
@@ -7,14 +7,13 @@ const DataTable = ({
   form,
   handleChange,
   handleSave,
-  handleEdit,
-  handleDelete,
+  handleSelect,
   setEditId,
   setForm,
 }) => {
   return (
     <table className="table table-hover">
-      <thead >
+      <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">รหัสวิชา</th>
@@ -23,6 +22,7 @@ const DataTable = ({
           <th scope="col">หน่วยกิต</th>
           <th scope="col">ประเภท</th>
           <th scope="col"></th>
+          <th scope="col"></th> {/* New column for Select button */}
         </tr>
       </thead>
       <tbody>
@@ -129,28 +129,15 @@ const DataTable = ({
                     Cancel
                   </button>
                 </>
-              ) : (
-                <>
-                  <button
-                    className="btn btn-warning"
-                    onClick={() => handleEdit(item.id)}
-                  >
-                    แก้ไข
-                  </button>{" "}
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => handleDelete(item.id)}
-                  >
-                    ลบ
-                  </button>{" "}
-                  <button
-                    class="btn btn-success"
-                    //onClick={() => }
-                  >
-                    เลือก
-                  </button>
-                </>
-              )}
+              ) : null /* Removed Edit and Delete buttons */}
+            </td>
+            <td>
+              <button
+                className="btn btn-select" // ใช้ CSS ที่กำหนดสีเลือดหมู
+                //onClick={() => handleSelect(item.id)}
+              >
+                เลือก
+              </button>
             </td>
           </tr>
         ))}
