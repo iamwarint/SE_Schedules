@@ -110,6 +110,7 @@ const Main = () => {
     
     <div>
       <Navbar/>
+      
       <div className="container-sm mt-5">
         <h2>รายวิชา</h2>
         <button className="btn1">Logout</button>
@@ -130,7 +131,7 @@ const Main = () => {
             <Upload handleChange={handleChange} />
           </div>
         </div>
-
+        
         <DataTable
           data={filteredData}
           editId={editId}
